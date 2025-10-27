@@ -1,0 +1,52 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Layout } from '@/shared/components/layout'
+import { Dashboard, InitialMEL, FinalMEL, Reports, Settings, AdminDashboard, MemoGenerator, Account, HowTo } from '@/pages'
+import { TestSupabase } from './TestSupabase'
+import { useAuthStore, mockLogin } from '@/stores/useAuthStore'
+import { useEffect } from 'react'
+
+function App() {
+  const { isAuthenticated, hasPermission } = useAuthStore()
+
+  // Mock login for development - DISABLED for simplified version
+  // useEffect(() => {
+  //   if (!isAuthenticated) {
+  //     mockLogin('editor') // Change to 'admin' or 'super_admin' to test different roles
+  //   }
+  // }, [isAuthenticated])
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Main App Routes with Layout */}
+        <Route path="/" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/initial-mel" element={<Layout><InitialMEL /></Layout>} />
+        <Route path="/final-mel" element={<Layout><FinalMEL /></Layout>} />
+        <Route path="/how-to" element={<Layout><HowTo /></Layout>} />
+
+        {/* Hidden Routes - Temporarily disabled */}
+        {/* <Route path="/memo-generator" element={<Layout><MemoGenerator /></Layout>} /> */}
+        {/* <Route path="/reports" element={<Layout><Reports /></Layout>} /> */}
+        {/* <Route path="/settings" element={<Layout><Settings /></Layout>} /> */}
+        {/* <Route path="/account" element={<Layout><Account /></Layout>} /> */}
+
+        {/* Admin Routes - Protected */}
+        {/* <Route
+          path="/admin"
+          element={
+            hasPermission('admin') ? (
+              <Layout><AdminDashboard /></Layout>
+            ) : (
+              <Navigate to="/" replace />
+            )
+          }
+        /> */}
+
+        {/* Test Route (without layout) */}
+        <Route path="/test-supabase" element={<TestSupabase />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App
