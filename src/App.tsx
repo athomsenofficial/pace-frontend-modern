@@ -1,12 +1,9 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from '@/shared/components/layout'
-import { Dashboard, InitialMEL, FinalMEL, Reports, Settings, AdminDashboard, MemoGenerator, Account, HowTo } from '@/pages'
+import { Dashboard, InitialMEL, FinalMEL, HowTo } from '@/pages'
 import { TestSupabase } from './TestSupabase'
-import { useAuthStore, mockLogin } from '@/stores/useAuthStore'
-import { useEffect } from 'react'
 
 function App() {
-  const { isAuthenticated, hasPermission } = useAuthStore()
 
   // Mock login for development - DISABLED for simplified version
   // useEffect(() => {

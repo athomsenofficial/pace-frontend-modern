@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, Button, Sele
 import { FileUpload } from '@/features/mel/components/FileUpload'
 import { RosterPreview } from '@/features/mel/components/RosterPreview'
 import { PascodeForm } from '@/features/mel/components/PascodeForm'
-import { Upload, CheckCircle, Download, RefreshCw, AlertCircle, XCircle } from 'lucide-react'
+import { Upload, CheckCircle, Download, RefreshCw, XCircle } from 'lucide-react'
 import { uploadFinalMEL, submitFinalMELPascodes, downloadBlob } from '@/services/api'
 import type { RosterPreviewResponse } from '@/services/rosterApi'
 

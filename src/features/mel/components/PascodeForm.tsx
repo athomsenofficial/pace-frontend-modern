@@ -14,7 +14,7 @@ import {
   TabPanels,
   TabPanel,
 } from '@/shared/components/ui'
-import { Send, User, Building } from 'lucide-react'
+import { Send, Building } from 'lucide-react'
 
 // Air Force Officer Ranks (for Commanders and Senior Raters)
 const AF_OFFICER_RANKS = [
@@ -151,7 +151,7 @@ const mergeInfo = (primary: SeniorRaterInfo | undefined, secondary: SeniorRaterI
   return merged
 }
 
-export function PascodeForm({ sessionData, onSubmit, melType = 'initial' }: PascodeFormProps) {
+export function PascodeForm({ sessionData, onSubmit }: PascodeFormProps) {
   const [pascodeInfo, setPascodeInfo] = useState<Record<string, SeniorRaterInfo>>({})
   const [smallUnitSR, setSmallUnitSR] = useState<SeniorRaterInfo>(createEmptyInfo())
   const [submitting, setSubmitting] = useState(false)
@@ -285,7 +285,6 @@ export function PascodeForm({ sessionData, onSubmit, melType = 'initial' }: Pasc
     return pascodeValid && smallUnitValid
   }
 
-  const melTypeLabel = melType === 'initial' ? 'Initial' : 'Final'
   const pascodes = derivedPascodes
   const hasMultiplePascodes = pascodes.length > 1
   const cycle = sessionData?.cycle || ''

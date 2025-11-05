@@ -36,7 +36,6 @@ export function RosterPreview({
   sessionId,
   sessionData,
   onContinue,
-  melType = 'initial',
   onSessionUpdate,
 }: RosterPreviewProps) {
   const [rosterData, setRosterData] = useState<RosterPreviewResponse | null>(null)

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, Button } from '@/shared/components/ui'
-import { Upload, Users, FileText, BarChart3, CheckCircle, Clock, AlertCircle, TrendingUp } from 'lucide-react'
+import { Upload, FileText, CheckCircle, Clock, AlertCircle, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export function Dashboard() {

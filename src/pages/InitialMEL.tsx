@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, Button, Sele
 import { FileUpload } from '@/features/mel/components/FileUpload'
 import { RosterPreview } from '@/features/mel/components/RosterPreview'
 import { PascodeForm } from '@/features/mel/components/PascodeForm'
-import { Upload, CheckCircle, Download, RefreshCw, AlertCircle, XCircle } from 'lucide-react'
+import { Upload, CheckCircle, Download, RefreshCw, XCircle } from 'lucide-react'
 import { uploadInitialMEL, submitInitialMELPascodes, downloadBlob } from '@/services/api'
 import type { RosterPreviewResponse } from '@/services/rosterApi'
 
@@ -26,7 +26,6 @@ export function InitialMEL() {
     { value: 'TSG', label: 'Technical Sergeant (TSG)' },
     { value: 'MSG', label: 'Master Sergeant (MSG)' },
     { value: 'SMS', label: 'Senior Master Sergeant (SMS)' },
-    { value: 'CMS', label: 'Chief Master Sergeant (CMS)' },
   ]
 
   // Generate dynamic year options based on April 1st cutoff

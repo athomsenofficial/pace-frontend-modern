@@ -1,13 +1,11 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Button, Badge } from '@/shared/components/ui'
-import { FileText, Settings, User, LogOut, ChevronDown, Shield } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { ChevronDown, Shield } from 'lucide-react'
 import { Menu } from '@headlessui/react'
 import { useAuthStore } from '@/stores/useAuthStore'
 
 export function Header() {
   const location = useLocation()
-  const navigate = useNavigate()
-  const { user, logout, hasPermission } = useAuthStore()
+  const { hasPermission } = useAuthStore()
 
   const isActive = (path: string) => {
     return location.pathname === path
