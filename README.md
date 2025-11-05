@@ -2,6 +2,8 @@
 
 A modern React application with Tailwind CSS and Supabase integration for the Promotion and Career Eligibility (PACE) management system.
 
+PACE Frontend Modern - React 19 TypeScript Vite application for Air Force promotion roster processing
+
 ## 🚀 Features
 
 - **Modern Tech Stack**: React 19 + TypeScript + Vite
