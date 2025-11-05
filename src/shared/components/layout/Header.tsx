@@ -87,6 +87,18 @@ export function Header() {
               </Menu.Items>
             </Menu>
 
+            {/* Document Generator */}
+            <Link
+              to="/document-generator"
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                isActive('/document-generator')
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-slate-600 hover:text-primary hover:bg-slate-50'
+              }`}
+            >
+              Document Generator
+            </Link>
+
             {/* How To Guide */}
             <Link
               to="/how-to"
