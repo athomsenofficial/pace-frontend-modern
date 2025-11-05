@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from '@/shared/components/layout'
 import { Dashboard, InitialMEL, FinalMEL, HowTo } from '@/pages'
+import { DocumentGenerator } from '@/pages/DocumentGenerator'
 import { TestSupabase } from './TestSupabase'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Layout><Dashboard /></Layout>} />
         <Route path="/initial-mel" element={<Layout><InitialMEL /></Layout>} />
         <Route path="/final-mel" element={<Layout><FinalMEL /></Layout>} />
+        <Route path="/document-generator" element={<Layout><DocumentGenerator /></Layout>} />
         <Route path="/how-to" element={<Layout><HowTo /></Layout>} />
 
         {/* Hidden Routes - Temporarily disabled */}
